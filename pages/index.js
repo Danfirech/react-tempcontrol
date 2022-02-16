@@ -5,6 +5,7 @@ export default function Home() {
   const [temperatureColor, setTemperatureColor] = useState("cold");
 
   const increaseTemperature = () => {
+    if (temperatureValue === 30) return;
     const newTemperature = temperatureValue + 1;
     setTemperatureValue(newTemperature);
 
@@ -14,6 +15,7 @@ export default function Home() {
   };
 
   const decreaseTemperature = () => {
+    if (temperatureValue === 0) return;
     const newTemperature = temperatureValue - 1;
     setTemperatureValue(newTemperature);
 
